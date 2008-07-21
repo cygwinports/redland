@@ -1,0 +1,165 @@
+redland
+------------------------------------------
+Redland is a library that provides a high-level interface for the 
+Resource Description Framework (RDF) allowing the RDF graph to be parsed 
+from XML, stored, queried and manipulated. Redland implements each of 
+the RDF concepts in its own class via an object based API.
+
+Runtime requirements:
+  cygwin-1.5.25-15
+  libdb4.6-4.6.21.1-1
+  libltdl7-2.2.2-2
+  libmysqlclient15-5.0.51-1
+  libpq5-8.2.9-1
+  libraptor1-1.4.18-1
+  librasqal1-0.9.16-1
+  libsqlite3_0-3.5.9-1
+  openssl-0.9.8h-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  autoconf2.5-2.61-1
+  automake1.10-1.10.1-1
+  binutils-20080523-2
+  bison-2.3-1
+  cygport-0.3.12-1
+  flex-2.5.35-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  gnome-common-2.20.0-2
+  gtk-doc-1.10-1
+  libtool-2.2.2-2
+  make-3.81-1
+  pkg-config-0.23a-2
+  sed-4.1.5-2
+
+Canonical website:
+  http://librdf.org/
+
+Canonical download:
+  http://download.librdf.org/source/
+
+-------------------------------------------
+
+Build instructions:
+  unpack redland-1.0.8-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./redland-1.0.8-X.cygport all
+
+This will create:
+  /usr/src/redland-1.0.8-X-src.tar.bz2
+  /usr/src/redland-1.0.8-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(redland)
+  /usr/bin/rdfproc.exe
+  /usr/bin/redland-config
+  /usr/bin/redland-db-upgrade.exe
+  /usr/share/doc/redland-1.0.8/AUTHORS
+  /usr/share/doc/redland-1.0.8/COPYING
+  /usr/share/doc/redland-1.0.8/COPYING.LIB
+  /usr/share/doc/redland-1.0.8/ChangeLog
+  /usr/share/doc/redland-1.0.8/INSTALL
+  /usr/share/doc/redland-1.0.8/LICENSE.txt
+  /usr/share/doc/redland-1.0.8/NEWS
+  /usr/share/doc/redland-1.0.8/README
+  /usr/share/doc/redland-1.0.8/TODO
+  /usr/share/man/man1/rdfproc.1.gz
+  /usr/share/man/man1/redland-db-upgrade.1.gz
+
+(librdf0)
+  /usr/bin/cygrdf-0.dll
+  /usr/lib/redland/cygrdf_storage_mysql.dll
+  /usr/lib/redland/cygrdf_storage_postgresql.dll
+  /usr/lib/redland/cygrdf_storage_sqlite.dll
+  /usr/lib/redland/librdf_storage_mysql.la
+  /usr/lib/redland/librdf_storage_postgresql.la
+  /usr/lib/redland/librdf_storage_sqlite.la
+  /usr/share/redland/Redland.i
+  /usr/share/redland/mysql-v1.ttl
+  /usr/share/redland/mysql-v2.ttl
+
+(librdf-devel)
+  /usr/include/librdf.h
+  /usr/include/rdf_concepts.h
+  /usr/include/rdf_digest.h
+  /usr/include/rdf_hash.h
+  /usr/include/rdf_init.h
+  /usr/include/rdf_iterator.h
+  /usr/include/rdf_log.h
+  /usr/include/rdf_model.h
+  /usr/include/rdf_node.h
+  /usr/include/rdf_parser.h
+  /usr/include/rdf_query.h
+  /usr/include/rdf_serializer.h
+  /usr/include/rdf_statement.h
+  /usr/include/rdf_storage.h
+  /usr/include/rdf_stream.h
+  /usr/include/rdf_uri.h
+  /usr/include/rdf_utf8.h
+  /usr/include/redland.h
+  /usr/lib/librdf.dll.a
+  /usr/lib/librdf.la
+  /usr/lib/pkgconfig/redland.pc
+  /usr/share/gtk-doc/html/redland/home.png
+  /usr/share/gtk-doc/html/redland/index.html
+  /usr/share/gtk-doc/html/redland/index.sgml
+  /usr/share/gtk-doc/html/redland/indexes.html
+  /usr/share/gtk-doc/html/redland/introduction.html
+  /usr/share/gtk-doc/html/redland/left.png
+  /usr/share/gtk-doc/html/redland/objects.html
+  /usr/share/gtk-doc/html/redland/redland-concepts.html
+  /usr/share/gtk-doc/html/redland/redland-digest.html
+  /usr/share/gtk-doc/html/redland/redland-files.html
+  /usr/share/gtk-doc/html/redland/redland-hash.html
+  /usr/share/gtk-doc/html/redland/redland-heuristics.html
+  /usr/share/gtk-doc/html/redland/redland-iterator.html
+  /usr/share/gtk-doc/html/redland/redland-list.html
+  /usr/share/gtk-doc/html/redland/redland-log.html
+  /usr/share/gtk-doc/html/redland/redland-model.html
+  /usr/share/gtk-doc/html/redland/redland-node.html
+  /usr/share/gtk-doc/html/redland/redland-parser.html
+  /usr/share/gtk-doc/html/redland/redland-query-results.html
+  /usr/share/gtk-doc/html/redland/redland-query.html
+  /usr/share/gtk-doc/html/redland/redland-serializer.html
+  /usr/share/gtk-doc/html/redland/redland-statement.html
+  /usr/share/gtk-doc/html/redland/redland-storage-module-file.html
+  /usr/share/gtk-doc/html/redland/redland-storage-module-hashes.html
+  /usr/share/gtk-doc/html/redland/redland-storage-module-memory.html
+  /usr/share/gtk-doc/html/redland/redland-storage-module-mysql.html
+  /usr/share/gtk-doc/html/redland/redland-storage-module-postgresql.html
+  /usr/share/gtk-doc/html/redland/redland-storage-module-sqlite.html
+  /usr/share/gtk-doc/html/redland/redland-storage-module-tstore.html
+  /usr/share/gtk-doc/html/redland/redland-storage-module-uri.html
+  /usr/share/gtk-doc/html/redland/redland-storage-modules.html
+  /usr/share/gtk-doc/html/redland/redland-storage.html
+  /usr/share/gtk-doc/html/redland/redland-stream.html
+  /usr/share/gtk-doc/html/redland/redland-unicode.html
+  /usr/share/gtk-doc/html/redland/redland-uri.html
+  /usr/share/gtk-doc/html/redland/redland-world.html
+  /usr/share/gtk-doc/html/redland/redland.devhelp
+  /usr/share/gtk-doc/html/redland/redland.devhelp2
+  /usr/share/gtk-doc/html/redland/redland.html
+  /usr/share/gtk-doc/html/redland/reference-manual.html
+  /usr/share/gtk-doc/html/redland/right.png
+  /usr/share/gtk-doc/html/redland/style.css
+  /usr/share/gtk-doc/html/redland/tutorial.html
+  /usr/share/gtk-doc/html/redland/up.png
+  /usr/share/man/man1/redland-config.1.gz
+  /usr/share/man/man3/redland.3.gz
+
+------------------
+
+Port Notes:
+
+----- version 1.0.8-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
