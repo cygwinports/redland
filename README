@@ -7,30 +7,31 @@ the RDF concepts in its own class via an object based API.
 
 Runtime requirements:
   cygwin-1.5.25-15
-  libdb4.6-4.6.21.1-1
-  libltdl7-2.2.2-2
-  libmysqlclient15-5.0.51-1
+  libdb4.6-4.6.21.4-10
+  libgcc1-4.3.2-2
+  libltdl7-2.2.7a-12
+  libmysqlclient16-5.1.34-1
   libpq5-8.2.9-1
-  libraptor1-1.4.18-1
-  librasqal1-0.9.16-1
-  libsqlite3_0-3.5.9-1
-  openssl-0.9.8h-1
+  libraptor1-1.4.18-10
+  librasqal1-0.9.16-10
+  libsqlite3_0-3.6.11-1
+  openssl-0.9.8k-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.61-1
-  automake1.10-1.10.1-1
-  binutils-20080523-2
+  autoconf2.5-2.63-10
+  automake1.10-1.10.1-10
+  binutils-20080624-2
   bison-2.3-1
-  cygport-0.3.12-1
+  cygport-0.9.6-1
   flex-2.5.35-1
   gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  gnome-common-2.20.0-2
-  gtk-doc-1.10-1
-  libtool-2.2.2-2
-  make-3.81-1
-  pkg-config-0.23a-2
+  gcc4-core-4.3.2-2
+  gnome-common-2.26.0-1
+  gtk-doc-1.11-2
+  libtool-2.2.7a-12
+  make-3.81-2
+  pkg-config-0.23b-10
   sed-4.1.5-2
 
 Canonical website:
@@ -42,15 +43,17 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack redland-1.0.8-X-src.tar.bz2
+  unpack redland-1.0.9-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./redland-1.0.8-X.cygport all
+  cygport ./redland-1.0.9-X.cygport all
 
 This will create:
-  /usr/src/redland-1.0.8-X-src.tar.bz2
-  /usr/src/redland-1.0.8-X.tar.bz2
+  /usr/src/librdf-devel-1.0.9-X.tar.bz2
+  /usr/src/librdf0-1.0.9-X.tar.bz2
+  /usr/src/redland-1.0.9-X-src.tar.bz2
+  /usr/src/redland-1.0.9-X.tar.bz2
 
 -------------------------------------------
 
@@ -58,17 +61,15 @@ Files included in the binary packages:
 
 (redland)
   /usr/bin/rdfproc.exe
-  /usr/bin/redland-config
   /usr/bin/redland-db-upgrade.exe
-  /usr/share/doc/redland-1.0.8/AUTHORS
-  /usr/share/doc/redland-1.0.8/COPYING
-  /usr/share/doc/redland-1.0.8/COPYING.LIB
-  /usr/share/doc/redland-1.0.8/ChangeLog
-  /usr/share/doc/redland-1.0.8/INSTALL
-  /usr/share/doc/redland-1.0.8/LICENSE.txt
-  /usr/share/doc/redland-1.0.8/NEWS
-  /usr/share/doc/redland-1.0.8/README
-  /usr/share/doc/redland-1.0.8/TODO
+  /usr/share/doc/redland/AUTHORS
+  /usr/share/doc/redland/COPYING
+  /usr/share/doc/redland/COPYING.LIB
+  /usr/share/doc/redland/ChangeLog
+  /usr/share/doc/redland/LICENSE.txt
+  /usr/share/doc/redland/NEWS
+  /usr/share/doc/redland/README
+  /usr/share/doc/redland/TODO
   /usr/share/man/man1/rdfproc.1.gz
   /usr/share/man/man1/redland-db-upgrade.1.gz
 
@@ -85,6 +86,7 @@ Files included in the binary packages:
   /usr/share/redland/mysql-v2.ttl
 
 (librdf-devel)
+  /usr/bin/redland-config
   /usr/include/librdf.h
   /usr/include/rdf_concepts.h
   /usr/include/rdf_digest.h
@@ -157,8 +159,8 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 1.0.8-1 -----
-Initial release for Cygwin.
+----- version 1.0.9-1 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

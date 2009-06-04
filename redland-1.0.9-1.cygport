@@ -1,0 +1,29 @@
+inherit gnome2  # for gtk-doc
+
+DESCRIPTION="RDF query library"
+HOMEPAGE="http://librdf.org/"
+SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
+PATCH_URI="1.0.9-no-undefined.patch"
+
+PKG_NAMES="${PN} librdf0 librdf-devel"
+redland_CONTENTS="--exclude=*-config* usr/bin/*.exe usr/share/doc/ usr/share/man/man1/"
+librdf0_CONTENTS="usr/bin/cygrdf-0.dll usr/lib/${PN}/ usr/share/${PN}/"
+librdf_devel_CONTENTS="usr/bin/*-config usr/include usr/lib/lib* usr/lib/pkgconfig/
+                       usr/share/gtk-doc/ usr/share/man/man1/*-config.* usr/share/man/man3/"
+
+DIFF_EXCLUDES="filtered_rdf_log.h libltdl"
+
+CYGCONF_ARGS="
+	--enable-modular
+	--with-bdb-include=/usr/include/db4.6
+	--with-bdb-lib=/usr/lib
+	--with-bdb-dbname=db-4.6
+	--with-mysql
+	--with-postgresql
+	--with-sqlite=3
+	--with-openssl-digests
+	--with-threads
+	--with-raptor=system
+	--with-rasqal=system
+	--with-xml-parser=libxml
+"

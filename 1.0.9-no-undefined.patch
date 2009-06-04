@@ -1,6 +1,6 @@
---- origsrc/redland-1.0.8/librdf/Makefile.am	2008-07-04 01:56:25.000000000 -0500
-+++ src/redland-1.0.8/librdf/Makefile.am	2008-07-21 00:59:01.656250000 -0500
-@@ -108,32 +108,32 @@
+--- origsrc/redland-1.0.9/src/Makefile.am	2008-07-04 01:56:25.000000000 -0500
++++ src/redland-1.0.9/src/Makefile.am	2008-07-21 00:59:01.656250000 -0500
+@@ -119,32 +119,32 @@
  plugin_LTLIBRARIES += librdf_storage_tstore.la
  librdf_storage_tstore_la_SOURCES = rdf_storage_tstore.c
  librdf_storage_tstore_la_CPPFLAGS = @TSTORE_CPPFLAGS@
@@ -41,7 +41,7 @@
  endif
  
  else
-@@ -175,7 +175,7 @@
+@@ -182,7 +182,7 @@
  EXTRA_DIST=\
  redland.spec redland.spec.in
  
