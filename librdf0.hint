@@ -1,5 +1,5 @@
 category: Text
-requires: libdb4.6 libgcc1 libltdl7 libmysqlclient16 libpq5 libraptor1 librasqal1 libsqlite3_0 openssl
+requires: libdb4.5 libgcc1 libiodbc2 libltdl7 libmysqlclient16 libpq5 libraptor1 librasqal2 libsqlite3_0
 external-source: redland
 sdesc: "Redland RDF library (runtime)"
 ldesc: "Redland is a library that provides a high-level interface for the
