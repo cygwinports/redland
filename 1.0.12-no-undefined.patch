@@ -1,6 +1,6 @@
---- origsrc/redland-1.0.10/src/Makefile.am	2009-11-23 00:38:32.000000000 -0600
-+++ src/redland-1.0.10/src/Makefile.am	2010-04-27 15:18:48.451135600 -0500
-@@ -121,7 +121,7 @@ plugin_LTLIBRARIES += librdf_storage_tst
+--- origsrc/redland-1.0.12/src/Makefile.am	2010-10-10 22:39:47.000000000 -0500
++++ src/redland-1.0.12/src/Makefile.am	2010-11-02 09:54:08.318311000 -0500
+@@ -127,7 +127,7 @@ plugin_LTLIBRARIES += librdf_storage_tst
  librdf_storage_tstore_la_SOURCES = rdf_storage_tstore.c
  librdf_storage_tstore_la_CPPFLAGS = @TSTORE_CPPFLAGS@
  librdf_storage_tstore_la_LIBADD = @TSTORE_LIBS@ librdf.la
@@ -9,7 +9,7 @@
  endif
  
  if STORAGE_MYSQL
-@@ -129,7 +129,7 @@ plugin_LTLIBRARIES += librdf_storage_mys
+@@ -135,7 +135,7 @@ plugin_LTLIBRARIES += librdf_storage_mys
  librdf_storage_mysql_la_SOURCES = rdf_storage_mysql.c
  librdf_storage_mysql_la_CPPFLAGS = @MYSQL_CPPFLAGS@
  librdf_storage_mysql_la_LIBADD = @MYSQL_LIBS@ librdf.la
@@ -18,16 +18,16 @@
  endif
  
  if STORAGE_SQLITE
-@@ -137,7 +137,7 @@ plugin_LTLIBRARIES += librdf_storage_sql
- librdf_storage_sqlite_la_SOURCES = rdf_storage_sqlite.c
- librdf_storage_sqlite_la_CPPFLAGS = @SQLITE_CPPFLAGS@
+@@ -146,7 +146,7 @@ librdf_storage_sqlite_la_SOURCES = rdf_s
+ # automake-generated rule to ensure this.
+ librdf_storage_sqlite_la_CPPFLAGS = $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) @SQLITE_CPPFLAGS@
  librdf_storage_sqlite_la_LIBADD = @SQLITE_LIBS@ librdf.la
 -librdf_storage_sqlite_la_LDFLAGS = -module -avoid-version
 +librdf_storage_sqlite_la_LDFLAGS = -module -avoid-version -no-undefined
  endif
  
  if STORAGE_POSTGRESQL
-@@ -145,15 +145,15 @@ plugin_LTLIBRARIES += librdf_storage_pos
+@@ -154,7 +154,7 @@ plugin_LTLIBRARIES += librdf_storage_pos
  librdf_storage_postgresql_la_SOURCES = rdf_storage_postgresql.c
  librdf_storage_postgresql_la_CPPFLAGS = @POSTGRESQL_CPPFLAGS@
  librdf_storage_postgresql_la_LIBADD = @POSTGRESQL_LIBS@ librdf.la
@@ -36,17 +36,16 @@
  endif
  
  if STORAGE_VIRTUOSO
- plugin_LTLIBRARIES += librdf_storage_virtuoso.la 
- librdf_storage_virtuoso_la_SOURCES = rdf_storage_virtuoso.c rdf_storage_virtuoso_internal.h
+@@ -162,7 +162,7 @@ plugin_LTLIBRARIES += librdf_storage_vir
+ librdf_storage_virtuoso_la_SOURCES = rdf_storage_virtuoso.c rdf_query_virtuoso.c rdf_storage_virtuoso_internal.h
  librdf_storage_virtuoso_la_CPPFLAGS = @ODBC_CFLAGS@
--librdf_storage_virtuoso_la_LIBADD = @ODBC_LIBS@
+ librdf_storage_virtuoso_la_LIBADD = @ODBC_LIBS@ librdf.la
 -librdf_storage_virtuoso_la_LDFLAGS = -module -avoid-version
-+librdf_storage_virtuoso_la_LIBADD = @ODBC_LIBS@ librdf.la
 +librdf_storage_virtuoso_la_LDFLAGS = -module -avoid-version -no-undefined
  endif
  
  else
-@@ -195,7 +195,7 @@ rdf_parser_raptor.c
+@@ -204,7 +204,7 @@ rdf_parser_raptor.c
  EXTRA_DIST=\
  redland.spec redland.spec.in
  

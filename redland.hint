@@ -1,5 +1,5 @@
 category: Text
-requires: libgcc1 libraptor1 librasqal2 librdf0
+requires: libraptor1 librasqal2 librdf0
 sdesc: "Redland RDF library (apps)"
 ldesc: "Redland is a library that provides a high-level interface for the
 Resource Description Framework (RDF) allowing the RDF graph to be parsed
