@@ -1,5 +1,5 @@
 category: Text
-requires: librdf0 libdb4.5-devel libraptor-devel librasqal-devel libtool
+requires: librdf0 libdb4.5-devel libraptor2-devel librasqal-devel libtool
 external-source: redland
 sdesc: "Redland RDF library (libdevel)"
 ldesc: "Redland is a library that provides a high-level interface for the
