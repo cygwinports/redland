@@ -1,8 +1,0 @@
-category: Text
-requires: libdb4.8 libiodbc2 libltdl7 libmysqlclient18 libpq5 libraptor2_0 librasqal3 libsqlite3_0
-external-source: redland
-sdesc: "Redland RDF library (runtime)"
-ldesc: "Redland is a library that provides a high-level interface for the
-Resource Description Framework (RDF) allowing the RDF graph to be parsed
-from XML, stored, queried and manipulated. Redland implements each of
-the RDF concepts in its own class via an object based API."

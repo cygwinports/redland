@@ -51,6 +51,6 @@
  
 -librdf_la_LDFLAGS = -version-info @LIBRDF_LIBTOOL_VERSION@ \
 +librdf_la_LDFLAGS = -version-info @LIBRDF_LIBTOOL_VERSION@ -no-undefined \
- @LIBRDF_LDFLAGS@ @LIBRDF_EXTERNAL_LIBS@ $(MEM_LIBS)
+ @LIBRDF_LDFLAGS@ @LIBRDF_EXTERNAL_LIBS@
  
  pkgdata_DATA=
