@@ -39,7 +39,7 @@
 @@ -162,7 +162,7 @@ plugin_LTLIBRARIES += librdf_storage_vir
  librdf_storage_virtuoso_la_SOURCES = rdf_storage_virtuoso.c rdf_query_virtuoso.c rdf_storage_virtuoso_internal.h
  librdf_storage_virtuoso_la_CPPFLAGS = @ODBC_CFLAGS@
- librdf_storage_virtuoso_la_LIBADD = @ODBC_LIBS@ librdf.la
+ librdf_storage_virtuoso_la_LIBADD = @ODBC_LIBS@ librdf.la -lrasqal
 -librdf_storage_virtuoso_la_LDFLAGS = -module -avoid-version
 +librdf_storage_virtuoso_la_LDFLAGS = -module -avoid-version -no-undefined
  endif
