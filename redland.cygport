@@ -2,7 +2,7 @@ inherit gnome2  # for gtk-doc
 
 NAME="redland"
 VERSION=1.0.17
-RELEASE=2
+RELEASE=4
 CATEGORY="Libs"
 SUMMARY="Redland RDF library"
 DESCRIPTION="Redland is a library that provides a high-level interface for the
